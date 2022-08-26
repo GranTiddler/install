@@ -1,4 +1,4 @@
-sudo pacman -S --noconfirm bspwm sxhkd picom-ibhagwan-git rofi feh
+sudo yay -Sy --noconfirm bspwm sxhkd picom-ibhagwan-git rofi feh
 
 cp -r ./config_files/wm_install/* /$HOME/.config
 cp .xinitrc /$HOME/
