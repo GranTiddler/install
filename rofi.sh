@@ -1,4 +1,4 @@
 mkdir ~/.config/rofi
-mkdir ~/.config/rofi/themes
-cp ./config_files/rofi/themes/* ~/.config/rofi/themes
+
+cp -r ./config_files/rofi/* ~/.config/rofi/
 
