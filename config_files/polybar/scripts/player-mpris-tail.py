@@ -355,8 +355,8 @@ class Player:
 
     def _statusReplace(self, match, metadata):
         tag = match.group('tag')
-        format = match.group('format')
-        formatlen = match.group('formatlen')
+        format = 't'
+        formatlen = 40
         text = match.group('text')
         tag_found = False
         reversed_tag = False

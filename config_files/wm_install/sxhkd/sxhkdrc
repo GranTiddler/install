@@ -18,6 +18,19 @@ alt + Escape
 # bspwm hotkeys
 #
 
+
+XF86MonBrightness{Up,Down}  
+  brightnessctl s 10%{+,-}  
+ 
+XF86Audio{Raise,Lower}Volume  
+  pulsemixer --change-volume {+,-}5
+ 
+XF86AudioMute
+  pulsemixer  --toggle-mute
+
+XF86AudioPlay
+  playerctl play-pause
+
 # quit/restart bspwm
 shift + alt + {q,r}
 	bspc {quit,wm -r}
@@ -25,6 +38,12 @@ shift + alt + {q,r}
 # close and kill
 super + {_,shift + }w
 	bspc node -{c,k}
+
+super + shift + bracket{right}
+	bspc node -d next && bspc desktop -f next
+
+super + shift + bracket{left}
+	bspc node -d prev && bspc desktop -f prev
 
 # alternate between the tiled and monocle layout
 super + m
