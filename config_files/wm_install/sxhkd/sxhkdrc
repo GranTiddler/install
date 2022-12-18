@@ -39,11 +39,15 @@ shift + alt + {q,r}
 super + {_,shift + }w
 	bspc node -{c,k}
 
-super + shift + bracket{right}
-	bspc node -d next && bspc desktop -f next
 
-super + shift + bracket{left}
-	bspc node -d prev && bspc desktop -f prev
+
+super + {_, shift}{bracketleft, bracketright}{_, ctrl}
+	bspc {desktop -f, node -d} {prev, next} {--follow, }
+
+
+super + {_,shift +}{1-9,0}{_, + ctrl}
+	bspc {desktop -f,node -d} '^{1-9,10}' {--follow, }
+	
 
 # alternate between the tiled and monocle layout
 super + m
@@ -97,11 +101,9 @@ super + {grave,Tab}
 super + {o,i}
 	bspc wm -h off; \
 	bspc node {older,newer} -f; \
-	bspc wm -h on
+	bspc wm -h on# focus or send to the given desktop
 
-# focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+
 
 #
 # preselect

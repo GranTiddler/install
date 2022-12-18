@@ -23,4 +23,7 @@ bspc config presel_feedback_color "#88C0D0"
 
 exec $HOME/.config/polybar/launch.sh &
 exec picom &
-feh --bg-fill ~/.config/bspwm/_DSC5021.jpg
+exec dunst &
+exec feh --bg-fill ~/.config/bspwm/_DSC5021.jpg &
+exec xinput --set-prop "DELL097D:00 04F3:311C Touchpad" "libinput Natural Scrolling Enabled" 1
+
