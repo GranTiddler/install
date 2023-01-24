@@ -40,6 +40,9 @@ super + {_,shift + }w
 	bspc node -{c,k}
 
 
+alt + q
+    bspc node -g sticky
+
 
 super + {_, shift}{bracketleft, bracketright}{_, ctrl}
 	bspc {desktop -f, node -d} {prev, next} {--follow, }

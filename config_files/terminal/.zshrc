@@ -20,7 +20,7 @@ ZSH_THEME="donger"
 # CASE_SENSITIVE="true"
 
 alias svvsd="nmcli dev wifi connect svvsd-guest"
-
+alias docker-force-restart="docker-compose up --build --remove-orphans --force-recreate"
 
 
 
@@ -189,3 +189,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export OPENAI_API_KEY=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
+export OPENAI_API_KEY=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
+export OPENAI_API_KEY=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
