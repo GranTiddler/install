@@ -63,6 +63,7 @@ get_session(){
     echo "dbus-launch ${dbus_args[*]}"
 }
 
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & 
 exec xinput --set-prop "DELL097D:00 04F3:311C Touchpad" "libinput Natural Scrolling Enabled" 1
 exec bspwm
 
